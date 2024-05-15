@@ -1,0 +1,29 @@
+server:
+  servlet:
+    context-path: /elon-kafka-consumer
+  port: 19999
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain
+    min-response-size: 20480
+
+#  ssl:
+#    key-store: keystore.p12
+#    key-store-password: elon123
+#    keyStoreType: PKCS12
+#    keyAlias: springboothttps
+
+neo:
+  application_name: lisi
+  kafka:
+    bootstrap:
+      servers: 192.168.5.128:9092
+    group:
+      id: neo1
+    max:
+      poll:
+        records: 1
+    topics: elon-topic, quick-event
+  redis:
+    ip: 127.0.0.1
+    port: 6379
