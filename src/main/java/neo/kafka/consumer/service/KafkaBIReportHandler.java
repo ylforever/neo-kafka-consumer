@@ -39,7 +39,7 @@ public class KafkaBIReportHandler extends TaskHandler {
         BIReportTask task = JSON.parseObject(taskJson, BIReportTask.class);
         LOGGER.info("Create BI report. taskCode:{}|taskId:{}", task.getTaskCode(), task.getTaskId());
 
-        // 生成BI报表. 具体处理逻辑略. 等待5秒
+        // 生成BI报表. 具体的处理逻辑略. 这里等待5秒表示业务处理耗时
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
