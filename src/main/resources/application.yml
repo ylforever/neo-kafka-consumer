@@ -23,7 +23,7 @@ neo:
     max:
       poll:
         records: 1
-    topics: elon-topic, quick-event
+    topics: elon-topic, quick-event, quick-stream
   redis:
     ip: 127.0.0.1
     port: 6379

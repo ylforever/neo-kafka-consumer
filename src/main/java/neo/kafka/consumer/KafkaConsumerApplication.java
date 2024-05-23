@@ -1,5 +1,6 @@
 package neo.kafka.consumer;
 
+import neo.kafka.consumer.service.StreamConsumerService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -14,6 +15,8 @@ public class KafkaConsumerApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(KafkaConsumerApplication.class);
+        StreamConsumerService streamConsumerService = new StreamConsumerService();
+        streamConsumerService.wordCountStream();
         LOGGER.info("Start up kafka consumer success.");
     }
 }
